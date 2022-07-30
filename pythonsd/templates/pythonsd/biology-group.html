@@ -1,0 +1,114 @@
+{% extends 'pythonsd/base.html' %}
+{% load static %}
+
+
+{% block metas %}<meta name="description" content="The Denver Biology and Bioinformatics Group is a special interest group for those studying topics in biology and wanting to learn more or connect with other professionals. The group holds regular Meetup events and is free to join.">{% endblock metas %}
+
+
+{% block main %}
+
+  <div class="p-5 text-center img-fluid bg-image" style="background-image: url('{% static 'img/mountain-group.jpg' %}');
+  background-size: cover; background-repeat: no-repeat ">
+    <div class="container">
+      <h1 class="display-3">Denver Biology and Bioinformatics Group</h1>
+    <br>
+    <br>
+      <p class="lead">A Denver-area collaborative connecting people with interests in biology and bioinformatics at all levels of expertise. The group holds regular Meetup events and is free to join.</p>
+    </div>
+    <br>
+    <br>
+  </div>
+
+  <div class="container">
+
+    <section class="mb-3">
+      <div class="row">
+        <div class="col-lg-4">
+          <h3>About us</h3>
+          <p>The Denver Biology and Bioinformatics Group is a special interest group for those studying topics in biology and wanting to learn more or connect with other professionals. We have a smaller weekly meetup for people to work on bioinformatics projects and a larger monthly meetup with speakers and talks.</p>
+          <p>Join us on <a href="https://www.meetup.com/denverbiology/">Meetup</a> to stay up to date with our upcoming events!</p>
+        </div>
+
+        <div class="col-lg-4">
+          <h3 id="slack-channel">Join us on Slack</h3>
+          <p>Meetup events aren't the only time for chatting. There's also a Slack channel. Sign on to ask questions, give answers, or just hang out. Denver Biology's Slack channel is available at <a href="https://join.slack.com/t/insituexsilico/shared_invite/zt-1cronlefb-0I3s9V6xYH4mv_JN17dK2w" rel="nofollow noopener noreferrer">insituexsilico.slack.com</a>. Slack is great place to promote a job posting at your company.</p>
+        </div>
+
+        <div class="col-lg-4">
+          <h3>Upcoming meetups</h3>
+          <div id="meetup-widget">
+            {% for event in upcoming_events %}
+              <div class="media mb-3">
+                <div class="media-body">
+                  <p class="m-0">
+                    <a href="{{ event.link }}" rel="nofollow noopener noreferrer">{{ event.name }}</a>
+                  </p>
+                  <p class="m-0">
+                  <span>{{ event.datetime|date:"N j, fa" }} to {{ event.enddatetime|date:"fa" }}</span>
+                    {% if event.venue %}<br><span>{{ event.venue }}</span>{% endif %}
+                  </p>
+                </div>
+              </div>
+            {% empty %}
+              <p>There are no upcoming events but join our <a href="https://www.meetup.com/denverbiology/" rel="nofollow noopener noreferrer">Meetup group</a> to get notified when we have one.</p>
+            {% endfor %}
+          </div>
+          <!-- <p>Interested in giving a 5-7 minute lightning talk at the monthly meetup? <a href="http://pysd.io/talk" rel="nofollow noopener noreferrer">Please sign up!</a></p> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-3">
+        <div class="row">
+            <div class="col-lg-4">
+                <h3>Free Learning Resources</h3>
+                <ul>
+                    <li><a href="https://www.ibiology.org/" rel="nofollow noopener noreferrer">iBiology's talks from world-renowned researchers</a></li>
+                    <li><a href="https://openwetware.org/wiki/Main_Page" rel="nofollow noopener noreferrer">OpenWetWare's community resources for biologists</a></li>
+                    <li><a href="https://igem.org/" rel="nofollow noopener noreferrer">iGEM Foundation for synthetic biology</a></li>
+                    <li><a href="https://biobricks.org/" rel="nofollow noopener noreferrer">BioBricks Foundation for inter-lab information and data sharing</a></li>
+                    <li><a href="https://www.yourgenome.org/facts/what-is-bioinformatics-and-how-do-we-use-it/" rel="nofollow noopener noreferrer">What is bioinformatics?</a></li>
+                    <li><a href="https://rosalind.info/" rel="nofollow noopener noreferrer">Learn bioinformatics on Rosalind</a></li>
+                    <li><a href="https://bioinformaticsdotca.github.io/" rel="nofollow noopener noreferrer">Canadian Bioinformatics Workshops</a></li>
+                    <li><a href="https://rnabio.org/" rel="nofollow noopener noreferrer">RNA-seq Bioinformatics</a></li>
+                    <li><a href="https://www.bioinformatics.org/" rel="nofollow noopener noreferrer">Bioinformatics.org</a></li>
+                    <li><a href="https://www.biostars.org/" rel="nofollow noopener noreferrer">Biostars (Stackoverflow for bioinformatics)</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <h3>Sponsors</h3>
+                <p>If you or your business would like to sponsor our group by providing food, venue, or giveaways, please email us at <a href="mailto: in-situ-ex-silico@googlegroups.com">in-situ-ex-silico@googlegroups.com</a></p>
+                <!-- <p>These fine companies help to make Denver Python a success.</p> -->
+
+                <!-- <ul class="list-unstyled"> -->
+                <!--     <li class="media"> -->
+                <!--         <img src="{% static 'img/sponsors/qualcomm-logo.png' %}" class="mr-3" alt="Qualcomm"> -->
+                <!--         <div class="media-body"> -->
+                <!--             <h5 class="mt-0 mb-1"><a href="https://www.qualcomm.com/" rel="nofollow noopener noreferrer">Qualcomm</a></h5> -->
+                <!--             <p class="m-0">Qualcomm provides the venue for our monthly meetup.</p> -->
+                <!--         </div> -->
+                <!--     </li> -->
+
+                <!--     <li class="media"> -->
+                <!--         <img src="{% static 'img/sponsors/cloudflare-logo.png' %}" class="mr-3" alt="Cloudflare"> -->
+                <!--         <div class="media-body"> -->
+                <!--             <h5 class="mt-0 mb-1"><a href="https://www.cloudflare.com/" rel="nofollow noopener noreferrer">Cloudflare</a></h5> -->
+                <!--             <p class="m-0">Cloudflare provides pizza at our monthly meetup</p> -->
+                <!--         </div> -->
+                <!--     </li> -->
+
+                <!--     <li class="media"> -->
+                <!--         <img src="{% static 'img/sponsors/jfrog-logo.png' %}" class="mr-3" alt="JFrog"> -->
+                <!--         <div class="media-body"> -->
+                <!--             <h5 class="mt-0 mb-1"><a href="https://jfrog.com/" rel="nofollow noopener noreferrer">JFrog</a></h5> -->
+                <!--             <p class="m-0">JFrog sponsors our monthly meetups and provides giveaways!</p> -->
+                <!--         </div> -->
+                <!--     </li> -->
+                <!-- </ul> -->
+            </div>
+        </div>
+    </section>
+
+  </div> <!-- /container -->
+
+{% endblock main %}

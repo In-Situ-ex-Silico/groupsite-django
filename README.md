@@ -1,6 +1,6 @@
-# San Diego Python Website
+# Denver Python Website
 
-This is the repository for the San Diego Python website at [sandiegopython.org](https://sandiegopython.org).
+This is the repository for the Denver Python website at [sandiegopython.org](https://sandiegopython.org).
 
 [![Circle CI](https://circleci.com/gh/sandiegopython/pythonsd-django/tree/main.svg?style=shield)](https://circleci.com/gh/sandiegopython/pythonsd-django/tree/main)
 [![AppVeyor](https://ci.appveyor.com/api/projects/status/184l9lc8y7av2fah?svg=true)](https://ci.appveyor.com/project/davidfischer/pythonsd-django)

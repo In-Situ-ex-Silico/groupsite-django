@@ -1,0 +1,17 @@
+# image edits
+https://smallbusiness.chron.com/make-semitransparencies-gimp-50854.html
+# site QA
+https://www.howtogeek.com/739812/how-to-view-mobile-websites-on-your-computer-in-chrome/
+# bootstrap/css docs
+https://mdbootstrap.com/docs/standard/extended/jumbotron/
+https://getbootstrap.com/docs/5.0/content/images/
+https://www.w3schools.com/cssref/css3_pr_background-size.asp
+https://developer.mozilla.org/en-US/docs/Web/CSS/background
+https://stackoverflow.com/questions/2263096/css-file-not-refreshing-in-browser
+# coloring
+https://getbootstrap.com/docs/4.0/components/list-group/
+https://getbootstrap.com/docs/5.1/utilities/background/
+https://getbootstrap.com/docs/5.0/utilities/colors/
+https://htmlcolorcodes.com/tutorials/html-background-color/
+https://htmlcolorcodes.com/
+https://getbootstrap.com/docs/5.2/helpers/color-background/

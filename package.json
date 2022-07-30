@@ -14,17 +14,19 @@
   "engines": {
     "node": "12.x"
   },
-  "author": "San Diego Python & Contributors",
+  "author": "Denver Python & Contributors",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pythonsd/pythonsd-django/issues"
   },
   "homepage": "https://github.com/pythonsd/pythonsd-django#readme",
   "dependencies": {
-    "bootstrap": "^4.4.1",
+    "@popperjs/core": "^2.11.5",
+    "bootstrap": "^5.2.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.6.0",
-    "popper.js": "^1.14.3"
+    "popper.js": "^1.14.3",
+    "startbootstrap-simple-sidebar": "^6.0.5"
   },
   "devDependencies": {
     "css-loader": "^3.2.0",

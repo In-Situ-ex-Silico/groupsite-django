@@ -88,7 +88,7 @@ DATABASES = {"default": dj_database_url.config(default="sqlite:///db.sqlite3")}
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "America/Los_Angeles"
+TIME_ZONE = "America/Denver"
 
 USE_I18N = True
 

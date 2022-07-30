@@ -2,7 +2,7 @@ from django.urls import path
 from django.urls import re_path
 from django.views import generic
 
-from .views import HomePageView
+from .views import HomePageView, PythonPageView, MlPageView, BioPageView
 
 
 urlpatterns = [
@@ -11,6 +11,26 @@ urlpatterns = [
         r"code-of-conduct/",
         generic.TemplateView.as_view(template_name="pythonsd/code-of-conduct.html"),
         name="code-of-conduct",
+    ),
+    path(
+        r"denverpython/",
+        PythonPageView.as_view(template_name="pythonsd/python-group.html"),
+        name="denverpython",
+    ),
+    path(
+        r"denverml/",
+        MlPageView.as_view(template_name="pythonsd/data-science-group.html"),
+        name="denverml",
+    ),
+    path(
+        r"denverbiology/",
+        BioPageView.as_view(template_name="pythonsd/biology-group.html"),
+        name="denverbiology",
+    ),
+    path(
+        r"remotework/",
+        BioPageView.as_view(template_name="pythonsd/remotework.html"),
+        name="remotework",
     ),
 ]
 

@@ -1,0 +1,117 @@
+{% extends 'pythonsd/base.html' %}
+{% load static %}
+
+
+{% block metas %}<meta name="description" content="The Denver Python User Group is a Python programming language special interest group open to people at all levels of expertise. The group holds regular Meetup events and is free to join.">{% endblock metas %}
+
+
+{% block main %}
+
+  <!-- <div class="jumbotron"> -->
+    <div class="p-5 text-center img-fluid bg-image" style="background-image: url('{% static 'img/mountain-group.jpg' %}');
+        background-size: cover; background-repeat: no-repeat ">
+    <div class="container">
+      <h1 class="display-3">Denver Python Users Group</h1>
+      <br>
+      <br>
+      <p class="lead">A Denver-area collaborative connecting people who study or work in the Python programming language at all levels of expertise. The group holds regular Meetup events and is free to join.</p>
+      <br>
+      <br>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <section class="mb-3">
+      <div class="row">
+        <div class="col-lg-4">
+          <h3>About us</h3>
+          <p>Denver Python is a group for those interested in learning about Python or connecting with other Python professionals. We have a smaller weekly meetup for people to work on Python projects and a larger monthly meetup with speakers and talks.</p>
+          <p>Join us on <a href="https://www.meetup.com/denverpython/">Meetup</a> to stay up to date with our upcoming events!</p>
+        </div>
+
+        <div class="col-lg-4">
+          <h3 id="slack-channel">Join us on Slack</h3>
+          <p>Meetup events aren't the only time for chatting. There's also a Slack channel. Sign on to ask questions, give answers, or just hang out. Denver Python's Slack channel is available at <a href="https://join.slack.com/t/insituexsilico/shared_invite/zt-1cronlefb-0I3s9V6xYH4mv_JN17dK2w" rel="nofollow noopener noreferrer">insituexsilico.slack.com</a>. Slack is great place to promote a job posting at your company.</p>
+        </div>
+
+        <div class="col-lg-4">
+          <h3>Upcoming meetups</h3>
+          <div id="meetup-widget">
+            {% for event in upcoming_events %}
+              <div class="media mb-3">
+                <div class="media-body">
+                  <p class="m-0">
+                    <a href="{{ event.link }}" rel="nofollow noopener noreferrer">{{ event.name }}</a>
+                  </p>
+                  <p class="m-0">
+                    <span>{{ event.datetime|date:"N j, fa" }} to {{ event.enddatetime|date:"fa" }}</span>
+                    {% if event.venue %}<br><span>{{ event.venue }}</span>{% endif %}
+                  </p>
+                </div>
+              </div>
+            {% empty %}
+              <p>There are no upcoming events but join our <a href="https://www.meetup.com/denverpython/" rel="nofollow noopener noreferrer">Meetup group</a> to get notified when we have one.</p>
+            {% endfor %}
+          </div>
+          <!-- <p>Interested in giving a 5-7 minute lightning talk at the monthly meetup? <a href="http://pysd.io/talk" rel="nofollow noopener noreferrer">Please sign up!</a></p> -->
+        </div>
+      </div>
+    </section>
+
+    {# Sponsors #}
+    <section class="mb-3">
+        <div class="row">
+            <div class="col-lg-4">
+                <h3>Free Learning Resources</h3>
+                    <ul>
+                        <li><a href="https://data-flair.training/blogs/python-project-ideas/" rel="nofollow noopener noreferrer">Data Flair Python Projects</a></li>
+                        <li><a href="https://automatetheboringstuff.com/" rel="nofollow noopener noreferrer">Automate the Boring Stuff with Python</a></li>
+                        <li><a href="https://learnpython.org/" rel="nofollow noopener noreferrer">LearnPython.org</a></li>
+                        <li><a href="https://realpython.com/" rel="nofollow noopener noreferrer">Real Python</a></li>
+                        <li><a href="https://www.reddit.com/r/learnpython/wiki/index/" rel="nofollow noopener noreferrer">Reddit Python Education</a></li>
+                        <li><a href="https://awesomeopensource.com/projects/learning-python" rel="nofollow noopener noreferrer">Awesome Open Source Learning-Python</a></li>
+                        <li><a href="https://www.pythonmorsels.com/" rel="nofollow noopener noreferrer">Trey Hunner's Python Morsels</a></li>
+                        <li><a href="https://www.twitch.tv/manningpublications/videos" rel="nofollow noopener noreferrer">Manning Publications on Twitch</a></li>
+                        <li><a href="https://www.youtube.com/c/ManningPublications" rel="nofollow noopener noreferrer">Manning Publications on YouTube</a></li>
+                        <li><a href="https://www.youtube.com/channel/UCXU-oZwaHnoYUhja_yrrrGg" rel="nofollow noopener noreferrer">San Diego Python's YouTube Channel</a></li>
+                        <li><a href="https://www.freecodecamp.org/learn" rel="nofollow noopener noreferrer">freeCodeCamp</a></li>
+                    </ul>
+            </div>
+            <div class="col-lg-4">
+                <h3>Sponsors</h3>
+                <p>If you or your business would like to sponsor our group by providing food, venue, or giveaways, please email us at <a href="mailto: in-situ-ex-silico@googlegroups.com">in-situ-ex-silico@googlegroups.com</a></p>
+                <!-- <p>These fine companies help to make Denver Python a success.</p> -->
+
+                <!-- <ul class="list-unstyled"> -->
+                <!--     <li class="media"> -->
+                <!--         <img src="{% static 'img/sponsors/qualcomm-logo.png' %}" class="mr-3" alt="Qualcomm"> -->
+                <!--         <div class="media-body"> -->
+                <!--             <h5 class="mt-0 mb-1"><a href="https://www.qualcomm.com/" rel="nofollow noopener noreferrer">Qualcomm</a></h5> -->
+                <!--             <p class="m-0">Qualcomm provides the venue for our monthly meetup.</p> -->
+                <!--         </div> -->
+                <!--     </li> -->
+
+                <!--     <li class="media"> -->
+                <!--         <img src="{% static 'img/sponsors/cloudflare-logo.png' %}" class="mr-3" alt="Cloudflare"> -->
+                <!--         <div class="media-body"> -->
+                <!--             <h5 class="mt-0 mb-1"><a href="https://www.cloudflare.com/" rel="nofollow noopener noreferrer">Cloudflare</a></h5> -->
+                <!--             <p class="m-0">Cloudflare provides pizza at our monthly meetup</p> -->
+                <!--         </div> -->
+                <!--     </li> -->
+
+                <!--     <li class="media"> -->
+                <!--         <img src="{% static 'img/sponsors/jfrog-logo.png' %}" class="mr-3" alt="JFrog"> -->
+                <!--         <div class="media-body"> -->
+                <!--             <h5 class="mt-0 mb-1"><a href="https://jfrog.com/" rel="nofollow noopener noreferrer">JFrog</a></h5> -->
+                <!--             <p class="m-0">JFrog sponsors our monthly meetups and provides giveaways!</p> -->
+                <!--         </div> -->
+                <!--     </li> -->
+                <!-- </ul> -->
+            </div>
+        </div>
+    </section>
+
+  </div> <!-- /container -->
+
+{% endblock main %}

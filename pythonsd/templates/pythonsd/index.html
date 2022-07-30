@@ -2,15 +2,16 @@
 {% load static %}
 
 
-{% block metas %}<meta name="description" content="The San Diego Python User Group is a programming language special interest group with hundreds of active members and regular meetups. It is free to join and open to members of all skill levels.">{% endblock metas %}
+{% block metas %}<meta name="description" content="The Denver Python User Group is a programming language special interest group with hundreds of active members and regular meetups. It is free to join and open to members of all skill levels.">{% endblock metas %}
 
 
 {% block main %}
 
-  <div class="jumbotron">
+  <div class="p-5 text-center img-fluid bg-image" style="background-image: url('{% static 'img/saturday-group-background.jpg' %}');
+        background-position: center ; background-size: cover ; background-repeat: no-repeat ">
     <div class="container">
-      <h1 class="display-3">San Diego Python</h1>
-      <p class="lead">San Diego Python is a Python programming language special interest group with hundreds of active members and regular meetups. It is free to join and open to members of all skill levels whether you've mastered Python or are just starting to learn.</p>
+      <h1 class="display-3">In Situ ex Silico</h1>
+      <p class="lead">A Denver-area collaborative primarily connecting people with interests in data science, biology, and anything related to the Python programming language, at all levels of expertise.</p>
     </div>
   </div>
 
@@ -18,73 +19,78 @@
 
     <section class="mb-3">
       <div class="row">
-        <div class="col-lg-4">
-          <h3>About us</h3>
-          <p>San Diego Python is a group for those interested in learning about Python or connecting with other Python professionals. We have a smaller weekly meetup for people to work on Python projects and a larger monthly meetup on the 4th Thursday of the month with speakers and talks.</p>
-          <p>Join us on <a href="https://www.meetup.com/pythonsd/">Meetup</a> to stay up to date with our upcoming events!</p>
-        </div>
+          <div class="col-lg-4">
+              <h3>Sponsors</h3>
+              <p>If you or your business would like to sponsor our groups by providing food, venue, or giveaways, please email us at <a href="mailto: in-situ-ex-silico@googlegroups.com">in-situ-ex-silico@googlegroups.com</a></p>
+          </div>
+        <!-- <div class="col-lg-4"> -->
+        <!--   <h3>About us</h3> -->
+        <!--   <p>Denver Python is a group for those interested in learning about Python or connecting with other Python professionals. We have a smaller weekly meetup for people to work on Python projects and a larger monthly meetup on the 4th Thursday of the month with speakers and talks.</p> -->
+        <!--   <p>Join us on <a href="https://www.meetup.com/pythonsd/">Meetup</a> to stay up to date with our upcoming events!</p> -->
+        <!-- </div> -->
 
         <div class="col-lg-4">
           <h3 id="slack-channel">Join us on Slack</h3>
-          <p>Meetup events aren't the only time for chatting. There's also a Slack channel. Sign on to ask questions, give answers, or just hang out. San Diego Python's Slack channel is available at <a href="https://pythonsd.slack.com/" rel="nofollow noopener noreferrer">pythonsd.slack.com</a>. Use <a href="https://pythonsd-slack.herokuapp.com/" rel="nofollow noopener noreferrer">this page</a> to get an invite to create your account. Slack is great place to promote a job posting at your company.</p>
-          <p>For those who prefer IRC, our Slack channel is mirrored to #sandiegopython on FreeNode.</p>
+          <p>Meetup events aren't the only time for chatting. There's also a Slack channel. Sign on to ask questions, give answers, or just hang out. All group channels are available at <a href="https://join.slack.com/t/insituexsilico/shared_invite/zt-1cronlefb-0I3s9V6xYH4mv_JN17dK2w" rel="nofollow noopener noreferrer">insituexsilico.slack.com</a>. Slack is great place to promote a job posting at your company.</p>
         </div>
 
         <div class="col-lg-4">
           <h3>Upcoming meetups</h3>
-          <div id="meetup-widget">
-            {% for event in upcoming_events %}
-              <div class="media mb-3">
-                <div class="media-body">
-                  <p class="m-0">
-                    <a href="{{ event.link }}" rel="nofollow noopener noreferrer">{{ event.name }}</a>
-                  </p>
-                  <p class="m-0">
-                    <span>{{ event.datetime|date:"N j, fa" }}</span>
-                    {% if event.venue %}<br><span>{{ event.venue }}</span>{% endif %}
-                  </p>
-                </div>
-              </div>
-            {% empty %}
-              <p>There are no upcoming events but join our <a href="https://www.meetup.com/pythonsd/" rel="nofollow noopener noreferrer">Meetup group</a> to get notified when we have one.</p>
-            {% endfor %}
-          </div>
-          <p>Interested in giving a 5-7 minute lightning talk at the monthly meetup? <a href="http://pysd.io/talk" rel="nofollow noopener noreferrer">Please sign up!</a></p>
+          <p>See the respective group page from the site menu. Study and co-working events are generally hosted at the same place and time for all groups. We are currently looking for venues to host monthly meetups where members and speakers can give talks. If you or your business would like to host a monthly meetup, please contact us at <a href="mailto: in-situ-ex-silico@googlegroups.com">in-situ-ex-silico@googlegroups.com</a>.</p>
+          <!-- <div id="meetup-widget"> -->
+          <!--   {% for event in upcoming_events %} -->
+          <!--     <div class="media mb-3"> -->
+          <!--       <div class="media-body"> -->
+          <!--         <p class="m-0"> -->
+          <!--           <a href="{{ event.link }}" rel="nofollow noopener noreferrer">{{ event.name }}</a> -->
+          <!--         </p> -->
+          <!--         <p class="m-0"> -->
+          <!--           <span>{{ event.datetime|date:"N j, fa" }}</span> -->
+          <!--           {% if event.venue %}<br><span>{{ event.venue }}</span>{% endif %} -->
+          <!--         </p> -->
+          <!--       </div> -->
+          <!--     </div> -->
+          <!--   {% empty %} -->
+          <!--     <p>There are no upcoming events but join our <a href="https://www.meetup.com/pythonsd/" rel="nofollow noopener noreferrer">Meetup group</a> to get notified when we have one.</p> -->
+          <!--   {% endfor %} -->
+          <!-- </div> -->
+          <!-- <p>Interested in giving a 5-7 minute lightning talk at the monthly meetup? <a href="http://pysd.io/talk" rel="nofollow noopener noreferrer">Please sign up!</a></p> -->
         </div>
       </div>
     </section>
 
-    {# Sponsors #}
-    <section class="mb-3">
-      <h3>Sponsors</h3>
-      <p>These fine companies help to make San Diego Python a success.</p>
+    <!-- {# Sponsors #} -->
+    <!-- <section class="mb-3"> -->
+    <!--   <h3>Sponsors</h3> -->
+    <!--   <p>If you or your business would like to sponsor our group by providing food, venue, or giveaways, please email us at <a href="mailto: in-situ-ex-silico@googlegroups.com">in-situ-ex-silico@googlegroups.com</a></p> -->
+    <!--   <1!-- <p>These fine companies help to make Denver Python a success.</p> --1> -->
 
-      <ul class="list-unstyled">
-        <li class="media">
-          <img src="{% static 'img/sponsors/qualcomm-logo.png' %}" class="mr-3" alt="Qualcomm">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1"><a href="https://www.qualcomm.com/" rel="nofollow noopener noreferrer">Qualcomm</a></h5>
-            <p class="m-0">Qualcomm provides the venue for our monthly meetup.</p>
-          </div>
-        </li>
+    <!--   <1!-- <ul class="list-unstyled"> --1> -->
+    <!--   <1!--   <li class="media"> --1> -->
+    <!--   <1!--     <img src="{% static 'img/sponsors/qualcomm-logo.png' %}" class="mr-3" alt="Qualcomm"> --1> -->
+    <!--   <1!--     <div class="media-body"> --1> -->
+    <!--   <1!--       <h5 class="mt-0 mb-1"><a href="https://www.qualcomm.com/" rel="nofollow noopener noreferrer">Qualcomm</a></h5> --1> -->
+    <!--   <1!--       <p class="m-0">Qualcomm provides the venue for our monthly meetup.</p> --1> -->
+    <!--   <1!--     </div> --1> -->
+    <!--   <1!--   </li> --1> -->
 
-        <li class="media">
-          <img src="{% static 'img/sponsors/cloudflare-logo.png' %}" class="mr-3" alt="Cloudflare">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1"><a href="https://www.cloudflare.com/" rel="nofollow noopener noreferrer">Cloudflare</a></h5>
-            <p class="m-0">Cloudflare provides pizza at our monthly meetup</p>
-          </div>
-        </li>
+    <!--   <1!--   <li class="media"> --1> -->
+    <!--   <1!--     <img src="{% static 'img/sponsors/cloudflare-logo.png' %}" class="mr-3" alt="Cloudflare"> --1> -->
+    <!--   <1!--     <div class="media-body"> --1> -->
+    <!--   <1!--       <h5 class="mt-0 mb-1"><a href="https://www.cloudflare.com/" rel="nofollow noopener noreferrer">Cloudflare</a></h5> --1> -->
+    <!--   <1!--       <p class="m-0">Cloudflare provides pizza at our monthly meetup</p> --1> -->
+    <!--   <1!--     </div> --1> -->
+    <!--   <1!--   </li> --1> -->
 
-        <li class="media">
-          <img src="{% static 'img/sponsors/jfrog-logo.png' %}" class="mr-3" alt="JFrog">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1"><a href="https://jfrog.com/" rel="nofollow noopener noreferrer">JFrog</a></h5>
-            <p class="m-0">JFrog sponsors our monthly meetups and provides giveaways!</p>
-          </div>
-        </li>
-      </ul>
-    </section>
+    <!--   <1!--   <li class="media"> --1> -->
+    <!--   <1!--     <img src="{% static 'img/sponsors/jfrog-logo.png' %}" class="mr-3" alt="JFrog"> --1> -->
+    <!--   <1!--     <div class="media-body"> --1> -->
+    <!--   <1!--       <h5 class="mt-0 mb-1"><a href="https://jfrog.com/" rel="nofollow noopener noreferrer">JFrog</a></h5> --1> -->
+    <!--   <1!--       <p class="m-0">JFrog sponsors our monthly meetups and provides giveaways!</p> --1> -->
+    <!--   <1!--     </div> --1> -->
+    <!--   <1!--   </li> --1> -->
+    <!--   <1!-- </ul> --1> -->
+    <!-- </section> -->
 
   </div> <!-- /container -->
 
