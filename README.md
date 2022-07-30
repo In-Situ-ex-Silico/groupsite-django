@@ -1,17 +1,17 @@
 # Denver Python Website
 
-This is the repository for the Denver Python website at [sandiegopython.org](https://sandiegopython.org).
+This is the repository for the Denver Python website at [insituexsilico.info](https://insituexsilico.info).
 
-[![Circle CI](https://circleci.com/gh/sandiegopython/pythonsd-django/tree/main.svg?style=shield)](https://circleci.com/gh/sandiegopython/pythonsd-django/tree/main)
-[![AppVeyor](https://ci.appveyor.com/api/projects/status/184l9lc8y7av2fah?svg=true)](https://ci.appveyor.com/project/davidfischer/pythonsd-django)
-[![Requirements Status](https://requires.io/github/sandiegopython/pythonsd-django/requirements.svg?branch=main)](https://requires.io/github/sandiegopython/pythonsd-django/requirements/?branch=main)
+[![Circle CI](https://circleci.com/gh/In-Situ-ex-Silico/groupsite-django/tree/main.svg?style=shield)](https://circleci.com/gh/In-Situ-ex-Silico/groupsite-django/tree/main)
+[![AppVeyor](https://ci.appveyor.com/api/projects/status/184l9lc8y7av2fah?svg=true)](https://ci.appveyor.com/project/davidfischer/groupsite-django)
+[![Requirements Status](https://requires.io/github/In-Situ-ex-Silico/groupsite-django/requirements.svg?branch=main)](https://requires.io/github/In-Situ-ex-Silico/groupsite-django/requirements/?branch=main)
 
 
 ## Developing
 
 ### Prerequisites
 
-* Python 3.7+
+* Python 3.9+
 * Node (12.x recommended)
 
 ### Getting started
