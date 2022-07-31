@@ -18,13 +18,9 @@ DEBUG = False
 SECRET_KEY = os.environ["SECRET_KEY"]
 ALLOWED_HOSTS = [
     "127.0.0.1",
-    "pythonsd.org",
-    "www.pythonsd.org",
-    "pythonsd.com",
-    "www.pythonsd.com",
-    "sandiegopython.org",
-    "www.sandiegopython.org",
-    "pythonsd.herokuapp.com",
+    "insituexsilico.info",
+    "www.insituexsilico.info",
+    "insituexsilico.herokuapp.com",
 ]
 
 
