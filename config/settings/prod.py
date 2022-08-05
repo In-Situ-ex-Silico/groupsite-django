@@ -20,9 +20,13 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "insituexsilico.info",
     "www.insituexsilico.info",
-    "insituexsilico.herokuapp.com",
+    # "insituexsilico.herokuapp.com",
 ]
 
+# render.com integration
+RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 # Set the URL where the admin is accessible
 ADMIN_URL = os.environ.get("ADMIN_URL", "admin")
@@ -90,3 +94,6 @@ if "SENDGRID_API_KEY" in os.environ:
     INSTALLED_APPS += ["anymail"]
     EMAIL_BACKEND = "anymail.backends.sendgrid.EmailBackend"
     ANYMAIL = {"SENDGRID_API_KEY": os.environ["SENDGRID_API_KEY"]}
+# integration for deployment on render.com
+if "RENDER" in os.environ:
+    INSTALLED_APPS += ["render.apps.RenderConfig"]
