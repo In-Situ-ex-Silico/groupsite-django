@@ -10,5 +10,8 @@ redis==3.3.10
 # Email
 django-anymail==7.0.0
 
+# Gunicorn
+gunicorn==20.1.0
+
 # trying to fix Render.com problem
 django-debug-toolbar==2.0
