@@ -1,5 +1,5 @@
 """Gunicorn *production* config file"""
-import sys
+# import sys
 
 # Django WSGI application path in pattern MODULE_NAME:VARIABLE_NAME
 # wsgi_app = "pythonsd.wsgi:application"
@@ -15,7 +15,7 @@ reload = False
 # Write access and error info to /var/log
 # accesslog = errorlog = "/var/log/gunicorn/dev.log"
 # accesslog = errorlog = "./runtime_files/prod.log"
-accesslog = errorlog = sys.stdout
+# accesslog = errorlog = sys.stdout
 # Redirect stdout/stderr to log file
 capture_output = False
 # PID file so you can easily fetch process ID
