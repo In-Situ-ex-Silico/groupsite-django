@@ -4,6 +4,10 @@ from django.views import generic
 
 from .views import HomePageView, PythonPageView, MlPageView, BioPageView
 
+# test for sentry.io logging
+def trigger_error(request):
+    division_by_zero = 1 / 0
+
 
 urlpatterns = [
     path(r"", HomePageView.as_view(template_name="pythonsd/index.html"), name="index"),
@@ -32,6 +36,7 @@ urlpatterns = [
         BioPageView.as_view(template_name="pythonsd/remotework.html"),
         name="remotework",
     ),
+    path("sentry-debug/", trigger_error),
 ]
 
 # These redirects handle redirecting URLs from the old static site to the new Django site
