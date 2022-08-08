@@ -33,7 +33,7 @@ INTERNAL_IPS = ["127.0.0.1"]
 
 
 # Application definition
-
+# Note: the last name here indicates the directory of this django app
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "pythonsd",
 ]
 
 MIDDLEWARE = [
