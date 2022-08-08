@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "pythonsd",
-    "groupsite-django",
 ]
 # integration for deployment on render.com
 if "RENDER" in os.environ:
