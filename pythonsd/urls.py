@@ -36,7 +36,7 @@ urlpatterns = [
         BioPageView.as_view(template_name="pythonsd/remotework.html"),
         name="remotework",
     ),
-    path("sentry-debug/", trigger_error),
+    path(r"sentry-debug/", trigger_error),
 ]
 
 # These redirects handle redirecting URLs from the old static site to the new Django site
