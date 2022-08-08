@@ -94,6 +94,3 @@ if "SENDGRID_API_KEY" in os.environ:
     INSTALLED_APPS += ["anymail"]
     EMAIL_BACKEND = "anymail.backends.sendgrid.EmailBackend"
     ANYMAIL = {"SENDGRID_API_KEY": os.environ["SENDGRID_API_KEY"]}
-# integration for deployment on render.com
-if "RENDER" in os.environ:
-    INSTALLED_APPS += ["render.apps.RenderConfig"]
