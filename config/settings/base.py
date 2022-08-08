@@ -32,9 +32,9 @@ ALLOWED_HOSTS = ["*"]
 INTERNAL_IPS = ["127.0.0.1"]
 
 INSTALLED_APPS = []
-# integration for deployment on render.com
-if "RENDER" in os.environ:
-    INSTALLED_APPS += ["render.apps.RenderConfig"]
+# # integration for deployment on render.com
+# if "RENDER" in os.environ:
+#     INSTALLED_APPS += ["render.apps.RenderConfig"]
 
 # Application definition
 # Note: the last name here indicates the directory of this django app
