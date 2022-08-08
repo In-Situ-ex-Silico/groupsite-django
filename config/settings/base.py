@@ -31,10 +31,14 @@ ALLOWED_HOSTS = ["*"]
 
 INTERNAL_IPS = ["127.0.0.1"]
 
+INSTALLED_APPS = []
+# integration for deployment on render.com
+if "RENDER" in os.environ:
+    INSTALLED_APPS += ["render.apps.RenderConfig"]
 
 # Application definition
 # Note: the last name here indicates the directory of this django app
-INSTALLED_APPS = [
+INSTALLED_APPS += [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -43,9 +47,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "pythonsd",
 ]
-# integration for deployment on render.com
-if "RENDER" in os.environ:
-    INSTALLED_APPS += ["render.apps.RenderConfig"]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
