@@ -20,4 +20,4 @@ capture_output = False
 # PID file so you can easily fetch process ID
 pidfile = "./runtime_files/prod.pid"
 # Daemonize the Gunicorn process (detach & enter background)
-daemon = True
+daemon = False
