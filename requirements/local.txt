@@ -1,19 +1,19 @@
 -r common.txt
 
 # Used for code formatting
-black==19.3b0
-pre-commit==1.18.3
+black==22.6.0
+pre-commit==2.20.0
 
 # Used for code coverage
-coverage==4.5.4
-django_coverage_plugin<2.0
+coverage==6.4.3
+django_coverage_plugin==2.0.3
 
 # Used in local testing
-WebTest==2.0.21
-beautifulsoup4==4.4.1
-WebOb==1.6.1
+WebTest==3.0.0
+beautifulsoup4==4.11.1
+WebOb==1.8.7
 
 # Used to help with Django related debugging
-django-debug-toolbar==2.0
+django-debug-toolbar==3.5.0
 
-tox<4.0
+tox==3.25.1
