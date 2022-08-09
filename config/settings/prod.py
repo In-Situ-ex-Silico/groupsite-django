@@ -23,6 +23,11 @@ ALLOWED_HOSTS = [
     # "insituexsilico.herokuapp.com",
 ]
 
+# render.com integration
+RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+
 # Set the URL where the admin is accessible
 ADMIN_URL = os.environ.get("ADMIN_URL", "admin")
 
